@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Cristopher%20Ian%20Molina%20F.&fontSize=40&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2d0057,50:7c3aed,100:a78bfa&height=200&section=header&text=Cristopher%20Ian%20Molina%20F.&fontSize=40&fontColor=ffffff&fontAlignY=38&animation=fadeIn" width="100%" alt="header"/>
 
 <br>
 
@@ -9,7 +9,7 @@
 <br>
 
 [![Email](https://img.shields.io/badge/Email-molina.fernandez.cristopherian%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:molina.fernandez.cristopherian@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Cristopher--Molina-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Cristopher-Molina)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-cristopher--molina--f-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cristopher-molina-f)
 [![GitHub](https://img.shields.io/badge/GitHub-CrXTrhx-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CrXTrhx)
 
 </div>
@@ -179,13 +179,13 @@ Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=CrXTrhx&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&icon_color=34d399&text_color=c9d1d9" alt="GitHub Stats" height="170"/>
+<img src="https://github-readme-stats.vercel.app/api?username=CrXTrhx&show_icons=true&theme=tokyonight&hide_border=true&bg_color=2d0057&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9" alt="GitHub Stats" height="170"/>
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CrXTrhx&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" height="170"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CrXTrhx&layout=compact&theme=tokyonight&hide_border=true&bg_color=2d0057&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" height="170"/>
 
 <br><br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=CrXTrhx&theme=tokyonight&hide_border=true&background=0f0c29&stroke=a78bfa&ring=34d399&fire=34d399&currStreakLabel=a78bfa" alt="GitHub Streak" height="170"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=CrXTrhx&theme=tokyonight&hide_border=true&background=2d0057&stroke=a78bfa&ring=a78bfa&fire=7c3aed&currStreakLabel=a78bfa" alt="GitHub Streak" height="170"/>
 
 </div>
 
@@ -201,4 +201,4 @@ Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora 
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=120&section=footer" width="100%" alt="footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2d0057,50:7c3aed,100:a78bfa&height=120&section=footer" width="100%" alt="footer"/>
