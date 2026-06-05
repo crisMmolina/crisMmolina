@@ -18,6 +18,8 @@
 
 ## 🧑‍💻 About Me
 
+<img align="right" alt="Coding" width="360" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTVid2VobzV5aXJhYWVndGkxeDRrZTJkcHJqc3F6Z3k4cXRuZmlwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPnAiaMCws8nOsE/giphy.gif"/>
+
 ```yaml
 name: Cristopher Ian Molina Fernández
 location: Ciudad de México, México
@@ -37,6 +39,8 @@ focus:
   - Integración de APIs complejas y despliegue en la nube
   - Proyectos de impacto real en medio ambiente y salud
 ```
+
+<br clear="right"/>
 
 ---
 
@@ -102,49 +106,26 @@ Plataforma web open source para digitalizar redes de metro y generar mapas de ca
 
 ---
 
-### 💰 Finance Tracker
-> Aplicación web de finanzas personales con dashboard interactivo.
 
-`React` `Vite` `TypeScript` `lucide-react`
-
-Dashboard con balance total, ingresos y gastos en tiempo real. Registro de movimientos por categoría, filtros, búsqueda y sistema de presupuestos mensuales con barra de progreso. Arquitectura modular con separación estricta de tipos, lógica financiera y datos. Persistencia local sin dependencias externas.
-
----
-
-### 🤖 Multimodal Emotion Analysis
-> Reconocimiento multimodal de emociones combinando audio y texto con Transformers.
-
-`Python` `HuggingFace Transformers` `Whisper` `RoBERTuito` `Wav2Vec2` `scikit-learn`
-
-Prototipo que combina ASR con Whisper, clasificación de emociones en español con RoBERTuito y análisis emocional de audio con Wav2Vec2. Dashboard de visualizaciones con heatmaps, series de tiempo y análisis estadístico (PCA, K-Means).
-
----
-
-### 🖐️ HandTrack-RehabGame
-> Juego de rehabilitación motora con realidad aumentada y rastreo de manos en tiempo real.
-
-`Python` `OpenCV` `MediaPipe`
-
-Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora con detección de landmarks de la mano via MediaPipe y entorno de AR construido en OpenCV. ⭐ 8 estrellas en GitHub.
-
----
 
 ## 🛠️ Tech Stack
+
+<div align="center">
 
 ### 🎨 Frontend & Mobile
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-### ⚙️ Backend & APIs
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+### ⚙️ Lenguajes & Backend
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
@@ -159,7 +140,8 @@ Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logoColor=black)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=google&logoColor=white)
+![Tesseract](https://img.shields.io/badge/Tesseract_OCR-5C3EE8?style=for-the-badge&logo=google&logoColor=white)
+![GraphHopper](https://img.shields.io/badge/GraphHopper-75B800?style=for-the-badge&logoColor=white)
 
 ### ☁️ Cloud & DevOps
 ![IBM Cloud](https://img.shields.io/badge/IBM_Cloud-1261FE?style=for-the-badge&logo=ibmcloud&logoColor=white)
@@ -170,8 +152,9 @@ Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora 
 
 ### 🔧 Herramientas
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![MapBox](https://img.shields.io/badge/MapBox-000000?style=for-the-badge&logo=mapbox&logoColor=white)
+
+</div>
 
 ---
 
@@ -179,13 +162,21 @@ Interfaz interactiva de drag-and-drop para ejercicios de rehabilitación motora 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=CrXTrhx&show_icons=true&theme=tokyonight&hide_border=true&bg_color=2d0057&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9" alt="GitHub Stats" height="170"/>
-&nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CrXTrhx&layout=compact&theme=tokyonight&hide_border=true&bg_color=2d0057&title_color=a78bfa&text_color=c9d1d9" alt="Top Languages" height="170"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" alt="GitHub Streak" />
+</picture>
 
-<br><br>
+</div>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=CrXTrhx&theme=tokyonight&hide_border=true&background=2d0057&stroke=a78bfa&ring=a78bfa&fire=7c3aed&currStreakLabel=a78bfa" alt="GitHub Streak" height="170"/>
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=dracula" />
+  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" alt="GitHub Profile Details" />
+</picture>
 
 </div>
 
