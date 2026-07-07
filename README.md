@@ -163,9 +163,9 @@ Plataforma web open source para digitalizar redes de metro y generar mapas de ca
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" alt="GitHub Streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" alt="GitHub Streak" />
 </picture>
 
 </div>
