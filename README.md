@@ -10,7 +10,7 @@
 
 [![Email](https://img.shields.io/badge/Email-molina.fernandez.cristopherian%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:molina.fernandez.cristopherian@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-cristopher--molina--f-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cristopher-molina-f)
-[![GitHub](https://img.shields.io/badge/GitHub-CrXTrhx-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CrXTrhx)
+[![GitHub](https://img.shields.io/badge/GitHub-crisMmolina-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/crisMmolina)
 
 </div>
 
@@ -163,9 +163,9 @@ Plataforma web open source para digitalizar redes de metro y generar mapas de ca
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" alt="GitHub Streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=1800" alt="GitHub Streak" />
 </picture>
 
 </div>
@@ -173,9 +173,9 @@ Plataforma web open source para digitalizar redes de metro y generar mapas de ca
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=dracula" />
-  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" />
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" alt="GitHub Profile Details" />
+  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=dracula" />
+  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=default" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=default" alt="GitHub Profile Details" />
 </picture>
 
 </div>
