@@ -174,9 +174,9 @@ Desarrollé (Nov. 2025) en React + Node.js una plataforma open source para digit
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=CrXTrhx&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" alt="GitHub Streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" alt="GitHub Streak" />
 </picture>
 
 </div>
@@ -184,9 +184,9 @@ Desarrollé (Nov. 2025) en React + Node.js una plataforma open source para digit
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=dracula" />
-  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" />
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=CrXTrhx&theme=default" alt="GitHub Profile Details" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=dracula" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=default" />
+  <img width="90%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=crisMmolina&theme=default" alt="GitHub Profile Details" />
 </picture>
 
 </div>
@@ -195,7 +195,7 @@ Desarrollé (Nov. 2025) en React + Node.js una plataforma open source para digit
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=CrXTrhx&color=a78bfa&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=crisMmolina&color=a78bfa&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
 
 <br><br>
 
