@@ -110,15 +110,6 @@ Diseñé y desarrollé (Abr. 2026) la arquitectura frontend completa. Implement�
 
 ---
 
-### Psyness
-> Asistente de salud mental con voz empática basado en Terapia Cognitivo-Conductual.
-
-`React` `ElevenLabs API` `n8n` `Redis`
-
-Construí (Dic. 2025) la interfaz conversacional de un asistente de salud mental con voz, integrando ElevenLabs para síntesis de audio en tiempo real dentro de la UI.
-
----
-
 ### RailSense
 > Herramienta de visualización ciudadana para redes de metro con mapas de calor.
 
@@ -135,7 +126,6 @@ Desarrollé (Nov. 2025) en React + Node.js una herramienta open source que proce
 ### Frontend & Web
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -167,9 +157,9 @@ Desarrollé (Nov. 2025) en React + Node.js una herramienta open source que proce
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" />
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed" alt="GitHub Streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=radical&hide_border=true&background=0D1117&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=300" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=300" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=crisMmolina&theme=default&hide_border=true&background=FFFFFF&stroke=a78bfa&ring=7c3aed&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=a78bfa&currStreakNum=7c3aed&sideNums=7c3aed&cache_seconds=300" alt="GitHub Streak" />
 </picture>
 
 </div>
@@ -192,7 +182,6 @@ Desarrollé (Nov. 2025) en React + Node.js una herramienta open source que proce
 
 <br><br>
 
-*Abierto a colaborar en proyectos de Frontend, Mobile, IA y Open Source.*
 
 </div>
 
