@@ -4,7 +4,7 @@
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } .motion { display: none; } }</style>
   <g class="tile" style="animation-delay:0.0s">
     <rect x="20.0" y="20" width="295.0" height="120" rx="20" fill="#04221a" stroke="#0d4a37" stroke-width="1.5"/>
-    <text x="44.0" y="84" class="sans" font-weight="800" font-size="38" fill="#34d399">885</text>
+    <text x="44.0" y="84" class="sans" font-weight="800" font-size="38" fill="#34d399">886</text>
     <text x="44.0" y="114" class="sans" font-size="15" fill="#8fc2ae">contribuciones · último año</text>
   </g>
   <g class="tile" style="animation-delay:0.1s">
