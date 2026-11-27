@@ -16,23 +16,23 @@
   <clipPath id="m"><rect x="412" y="24" width="204" height="292" rx="18"/></clipPath>
   <rect x="412" y="24" width="204" height="292" rx="18" fill="#053b2c"/>
   <g clip-path="url(#m)"><path id="l1" d="M426,84 C492,84 492,234 602,234" fill="none" stroke="#059669" stroke-width="7" stroke-linecap="round"/><path id="l2" d="M432,286 C482,164 532,144 596,64" fill="none" stroke="#6ee7b7" stroke-width="7" stroke-linecap="round" stroke-opacity=".8"/><circle cx="426" cy="84" r="16" fill="#34d399" class="heat" style="animation-delay:0.0s"/><circle cx="426" cy="84" r="7" fill="#04221a" stroke="#ecfdf5" stroke-width="3"/><circle cx="506" cy="164" r="28" fill="#34d399" class="heat" style="animation-delay:0.6s"/><circle cx="506" cy="164" r="7" fill="#04221a" stroke="#ecfdf5" stroke-width="3"/><circle cx="602" cy="234" r="22" fill="#34d399" class="heat" style="animation-delay:1.2s"/><circle cx="602" cy="234" r="7" fill="#04221a" stroke="#ecfdf5" stroke-width="3"/><circle cx="432" cy="286" r="16" fill="#34d399" class="heat" style="animation-delay:1.8s"/><circle cx="432" cy="286" r="7" fill="#04221a" stroke="#ecfdf5" stroke-width="3"/><circle cx="596" cy="64" r="22" fill="#34d399" class="heat" style="animation-delay:2.4s"/><circle cx="596" cy="64" r="7" fill="#04221a" stroke="#ecfdf5" stroke-width="3"/><circle r="5" fill="#ecfdf5" class="motion"><animateMotion dur="3.5s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle><circle r="5" fill="#ecfdf5" class="motion"><animateMotion dur="4.2s" repeatCount="indefinite"><mpath href="#l2"/></animateMotion></circle></g>
-  <g transform="translate(54,44) scale(0.24)">
+  <g transform="translate(54,44) scale(0.22)">
   <defs>
-    <linearGradient id="b-austria-mini-rim" gradientUnits="userSpaceOnUse" x1="-64" y1="-64" x2="64" y2="64"><stop offset="0.00" stop-color="#e8fff5"/><stop offset="0.25" stop-color="#6ee7b7"/><stop offset="0.50" stop-color="#047857"/><stop offset="0.75" stop-color="#34d399"/><stop offset="1.00" stop-color="#e8fff5"/></linearGradient>
-    <linearGradient id="b-austria-mini-ink" gradientUnits="userSpaceOnUse" x1="-40" y1="-40" x2="40" y2="40"><stop offset="0.00" stop-color="#ffffff"/><stop offset="0.50" stop-color="#e8fff5"/><stop offset="1.00" stop-color="#6ee7b7"/></linearGradient>
-    <radialGradient id="b-austria-mini-face" cx=".32" cy=".25" r=".95"><stop offset="0" stop-color="#047857"/><stop offset="1" stop-color="#011a14"/></radialGradient>
-    <clipPath id="b-austria-mini-clip"><rect x="-64" y="-64" width="128" height="128" rx="30"/></clipPath>
+    <linearGradient id="m-austria0-rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#e8fff5"/><stop offset="0.25" stop-color="#6ee7b7"/><stop offset="0.50" stop-color="#047857"/><stop offset="0.75" stop-color="#34d399"/><stop offset="1.00" stop-color="#e8fff5"/></linearGradient>
+    <linearGradient id="m-austria0-bevel" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#e8fff5"/><stop offset="0.25" stop-color="#34d399"/><stop offset="0.50" stop-color="#047857"/><stop offset="0.75" stop-color="#6ee7b7"/><stop offset="1.00" stop-color="#e8fff5"/></linearGradient>
+    <radialGradient id="m-austria0-face" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#022c22"/></radialGradient>
+    <clipPath id="m-austria0-clip"><polygon points="0.0,-100.0 86.6,-50.0 86.6,50.0 0.0,100.0 -86.6,50.0 -86.6,-50.0" /></clipPath>
   </defs>
-  <rect x="-64" y="-64" width="128" height="128" rx="30" fill="url(#b-austria-mini-rim)"/>
-  <rect x="-56" y="-56" width="112" height="112" rx="24" fill="url(#b-austria-mini-face)"/>
-  <rect x="-56" y="-56" width="112" height="112" rx="24" fill="none" stroke="#000" stroke-opacity=".3" stroke-width="2"/>
-  <path d="M-46,-30 Q-46,-46 -30,-46 H30" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="4" stroke-linecap="round"/>
-  <g transform="translate(0,2) scale(.82)">
-    <g transform="translate(0,3)" opacity=".4"><rect x="-30" y="-42" width="60" height="68" rx="15" fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20,-28 H20 V-6 H-20 Z" fill="#000" stroke="#000" stroke-width="4" stroke-linejoin="round"/><circle cx="-14" cy="11" r="4.5" fill="#000"/><circle cx="14" cy="11" r="4.5" fill="#000"/><path d="M-18,28 L-30,44 M18,28 L30,44 M-36,44 H36" fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <rect x="-30" y="-42" width="60" height="68" rx="15" fill="none" stroke="url(#b-austria-mini-ink)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20,-28 H20 V-6 H-20 Z" fill="#6ee7b7" stroke="url(#b-austria-mini-ink)" stroke-width="4" stroke-linejoin="round"/><circle cx="-14" cy="11" r="4.5" fill="url(#b-austria-mini-ink)"/><circle cx="14" cy="11" r="4.5" fill="url(#b-austria-mini-ink)"/><path d="M-18,28 L-30,44 M18,28 L30,44 M-36,44 H36" fill="none" stroke="url(#b-austria-mini-ink)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <polygon points="0.0,-100.0 86.6,-50.0 86.6,50.0 0.0,100.0 -86.6,50.0 -86.6,-50.0" fill="url(#m-austria0-rim)"/>
+  <g stroke="#000" stroke-opacity=".18" stroke-width="2"></g>
+  <polygon points="0.0,-87.0 75.3,-43.5 75.3,43.5 0.0,87.0 -75.3,43.5 -75.3,-43.5" fill="url(#m-austria0-bevel)"/>
+  <polygon points="0.0,-79.0 68.4,-39.5 68.4,39.5 0.0,79.0 -68.4,39.5 -68.4,-39.5" fill="url(#m-austria0-face)"/>
+  <polygon points="0.0,-76.0 65.8,-38.0 65.8,38.0 0.0,76.0 -65.8,38.0 -65.8,-38.0" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M-62,-30 A68,68 0 0 1 30,-66" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(0,-4)"><rect x="-32" y="-44" width="64" height="72" rx="16" fill="none" stroke="#ecfdf5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M-22,-30 H22 V-6 H-22 Z" fill="#6ee7b7" fill-opacity=".85" stroke="#ecfdf5" stroke-width="4" stroke-linejoin="round"/><circle cx="-16" cy="12" r="5" fill="#ecfdf5"/><circle cx="16" cy="12" r="5" fill="#ecfdf5"/><path d="M-20,30 L-32,46 M20,30 L32,46 M-38,46 H38" fill="none" stroke="#ecfdf5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
   
-  
+  <rect x="-34" y="78" width="68" height="32" rx="16" fill="url(#m-austria0-rim)" stroke="#000" stroke-opacity=".2"/>
+  <text x="0" y="101" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-weight="800" font-size="20" fill="#022c22">OS</text>
 </g>
   <rect x="88.0" y="32.0" width="194.5" height="29" rx="14.5" fill="#053b2c" stroke="#0d4a37"/><text x="102.0" y="51.2" class="mono" font-size="13" fill="#34d399">Ganador · Open Source</text>
   <text x="30" y="128" class="sans" font-weight="800" font-size="44" letter-spacing="-1" fill="#ecfdf5">RailSense</text>

@@ -7,7 +7,7 @@ import math
 import os
 import random
 
-from medals import SHINE_CSS, badge
+from medals import SHINE_CSS, medal
 from theme import MONO, SANS, THEMES, chip, esc, svg_doc, text_width, write
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -154,17 +154,17 @@ def banner(t: dict) -> str:
 MEDALS = [
     # slug, finish, shape, icon, chip, rank line, event, date, project slug (for the mini medal / link), alt text
     ("chilangaton", "gold", "circle", "hexmap", "1°", "1er lugar", "SEDECO Chilangatón", "oct 2026", "colonia",
-     "Estación de la línea de logros: 1er lugar en SEDECO Chilangatón, octubre 2026, con ColonIA: mapa H3 del comercio popular de la CDMX."),
+     "Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026, con ColonIA: mapa H3 del comercio popular de la CDMX."),
     ("ada", "gold", "circle", "pin", "1°", "1er lugar", "Hackathon ADA", "oct 2026", "colonia",
-     "Estación de la línea de logros: 1er lugar en Hackathon ADA, octubre 2026, con ColonIA."),
+     "Medalla de 1er lugar en Hackathon ADA, octubre 2026, con ColonIA."),
     ("secretaria", "gold", "circle", "gov", "1°", "1er lugar", "SEDECO SecretarIA", "jun 2026", "mercuria",
-     "Estación de la línea de logros: 1er lugar en SEDECO SecretarIA Hackathon, junio 2026, con MercurIA."),
+     "Medalla de 1er lugar en SEDECO SecretarIA Hackathon, junio 2026, con MercurIA."),
     ("ibm", "gold", "circle", "city", "1°", "1er lugar", "IBM Talent Land", "abr 2026", "lumivia",
-     "Estación de la línea de logros: 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA."),
+     "Medalla de 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA."),
     ("elevenlabs", "violet", "circle", "voice", "3°", "3er lugar + Bolt", "ElevenLabs Hackathon", "dic 2025", "psyness",
-     "Estación de la línea de logros: 3er lugar y Mejor proyecto con Bolt en ElevenLabs Hackathon México, diciembre 2025, con Psyness."),
-    ("austria", "mint", "circle", "train", "OS", "Ganador Open Source", "Made in Austria", "nov 2025", "railsense",
-     "Estación de la línea de logros: ganador de la categoría Open Source en Your Future Made in Austria, noviembre 2025, con RailSense."),
+     "Medalla de 3er lugar y Mejor proyecto con Bolt en ElevenLabs Hackathon México, diciembre 2025, con Psyness."),
+    ("austria", "mint", "hex", "train", "OS", "Ganador Open Source", "Made in Austria", "nov 2025", "railsense",
+     "Medalla de ganador de la categoría Open Source en Your Future Made in Austria, noviembre 2025, con RailSense."),
 ]
 MEDALS_BY_PROJECT = {}
 for _m in MEDALS:
@@ -172,86 +172,29 @@ for _m in MEDALS:
         MEDALS_BY_PROJECT.setdefault(_m[8], []).append(_m)
 
 
-STATION_W, STATION_H, LINE_Y = 420, 300, 104
-TRAIN_CYCLE, TRAIN_SLOT = 15.0, 2.5  # seconds: full trip, and time spent crossing one tile
-
-
-def train_css(i: int) -> str:
-    """Keyframes for the train crossing tile i: it enters, stops at the station
-    and leaves, during its own slot of the shared cycle, so across the six tiles
-    it looks like one train running the whole line."""
-    a = i * TRAIN_SLOT / TRAIN_CYCLE * 100
-    d = TRAIN_SLOT / TRAIN_CYCLE * 100
-    off, stop, out = -180, STATION_W / 2 - 58, STATION_W + 40
-    return f"""
-    .train {{ transform: translateX({off}px); animation: run{i} {TRAIN_CYCLE}s linear infinite; }}
-    @keyframes run{i} {{
-      0% {{ transform: translateX({off}px) }}
-      {a:.2f}% {{ transform: translateX({off}px); animation-timing-function: ease-out }}
-      {a + d * .38:.2f}% {{ transform: translateX({stop}px) }}
-      {a + d * .62:.2f}% {{ transform: translateX({stop}px); animation-timing-function: ease-in }}
-      {a + d:.2f}%, 100% {{ transform: translateX({out}px) }}
-    }}
-    .ping {{ animation: ping 2.6s ease-out infinite; transform-box: fill-box; transform-origin: center; opacity: 0; }}
-    @keyframes ping {{ 0% {{ opacity: .6; transform: scale(.95) }} 100% {{ opacity: 0; transform: scale(1.25) }} }}
-"""
-
-
-def train(t: dict) -> str:
-    cars = []
-    for k in range(3):
-        x = k * 40
-        nose = k == 2
-        shape = (f'<path d="M{x},-11 H{x + 28} Q{x + 37},-11 {x + 37},0 Q{x + 37},11 {x + 28},11 H{x} Z"' if nose
-                 else f'<rect x="{x}" y="-11" width="37" height="22" rx="5"')
-        cars.append(f'{shape} fill="{t["text"]}"/>'
-                    + "".join(f'<rect x="{x + wx}" y="-5" width="7" height="6" rx="1.5" fill="{t["accent"]}"/>' for wx in (5, 15, 25)[: 2 if nose else 3]))
-    return "".join(cars)
-
-
 def medal_svg(t: dict, i: int, m: tuple) -> str:
-    """One award as a metro station tile. Tiles sit edge to edge, three per
-    row, so their line segments join into one continuous line."""
-    slug, finish, _shape, icon_name, chip_txt, rank, event, date, _, alt = m
-    W, H, Y = STATION_W, STATION_H, LINE_Y
-    pos, row, last = i % 3, i // 3, i == len(MEDALS) - 1
-    rank_color = {"gold": t["gold"], "violet": t["alt"], "mint": t["accent"]}[finish]
-    x0 = 44 if i == 0 else 0
-    x1 = W - 44 if last else W
-    line = f"""
-  <path d="M{x0},{Y} H{x1}" stroke="{t['border']}" stroke-width="22" stroke-linecap="round"/>
-  <path d="M{x0},{Y} H{x1}" stroke="{t['accent']}" stroke-width="14" stroke-linecap="round"/>
-  <path d="M{x0},{Y} H{x1}" stroke="{t['bg']}" stroke-opacity=".35" stroke-width="2" stroke-dasharray="1 9"/>"""
-    ends = ""
-    if i == 0:  # first terminal: today
-        ends += (f'<circle cx="{x0}" cy="{Y}" r="15" fill="{t["bg"]}" stroke="{t["accent"]}" stroke-width="7"/>'
-                 f'<text x="{x0}" y="{Y - 30}" text-anchor="middle" class="mono" font-size="14" letter-spacing="2" fill="{t["muted"]}">HOY</text>')
-    if last:  # last terminal
-        ends += f'<circle cx="{x1}" cy="{Y}" r="15" fill="{t["bg"]}" stroke="{t["accent"]}" stroke-width="7"/>'
-    if pos == 2 and not last:  # line continues on the next row
-        ends += "".join(f'<path d="M{W - 46 + k * 12},{Y - 6} l6,6 l-6,6" fill="none" stroke="{t["bg"]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' for k in range(3))
-    if pos == 0 and row > 0:
-        ends += "".join(f'<path d="M{12 + k * 12},{Y - 6} l6,6 l-6,6" fill="none" stroke="{t["bg"]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' for k in range(3))
-    ping = (f'<rect class="ping" x="{W / 2 - 70}" y="{Y - 70}" width="140" height="140" rx="34" fill="none" stroke="{t["gold"]}" stroke-width="2"/>'
-            if i == 0 else "")
+    slug, finish, shape, icon_name, chip_txt, rank, event, date, _, alt = m
+    W, H = 320, 352
+    style = BASE_STYLE + SHINE_CSS + """
+    .rise { animation: rise .7s cubic-bezier(.2,.9,.3,1.2) both; transform-box: fill-box; transform-origin: center; }
+    @keyframes rise { from { opacity: 0; transform: scale(.85) } to { opacity: 1; transform: none } }
+    """
     body = f"""
-  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000" flood-opacity="{'.5' if t is THEMES['dark'] else '.18'}"/></filter>
-  {line}
-  {ends}
-  <g class="train motion"><g transform="translate(0,{Y}) scale(1.25)">{train(t)}</g></g>
-  {ping}
-  <g transform="translate({W / 2},{Y})" filter="url(#sh)">{badge(slug, finish, icon_name, chip_txt, shine_delay=1.3 * i)}</g>
-  <text x="{W / 2}" y="214" text-anchor="middle" class="sans" font-weight="800" font-size="25" letter-spacing="-.3" fill="{t['text']}">{esc(event)}</text>
-  <text x="{W / 2}" y="244" text-anchor="middle" class="sans" font-weight="700" font-size="19" fill="{rank_color}">{esc(rank)}</text>
-  <text x="{W / 2}" y="274" text-anchor="middle" class="mono" font-size="16" letter-spacing="2" fill="{t['muted']}">{esc(date.upper())}</text>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="{'.45' if t is THEMES['dark'] else '.18'}"/></filter>
+  <g class="rise" style="animation-delay:{0.1 * i:.1f}s">
+    <g transform="translate(160,124)" filter="url(#sh)">{medal(slug, finish, shape, icon_name, chip_txt, shine_delay=1.2 * i)}</g>
+  </g>
+  <text x="160" y="282" text-anchor="middle" class="sans" font-weight="800" font-size="24" fill="{t['text']}">{esc(rank)}</text>
+  <text x="160" y="310" text-anchor="middle" class="sans" font-size="20" fill="{t['muted']}">{esc(event)}</text>
+  <text x="160" y="337" text-anchor="middle" class="mono" font-size="16" letter-spacing="1" fill="{t['accent']}">{esc(date.upper())}</text>
 """
-    return svg_doc(W, H, body, BASE_STYLE + SHINE_CSS + train_css(i), alt)
+    return svg_doc(W, H, body, style, alt)
 
 
-def mini_medals(slug, cx: float, cy: float, scale: float = 0.24) -> str:
+def mini_medals(slug, cx: float, cy: float, scale: float = 0.22) -> str:
     out = []
     for k, m in enumerate(MEDALS_BY_PROJECT.get(slug, [])):
-        out.append(f'<g transform="translate({cx + 34 * k},{cy}) scale({scale})">{badge(m[0] + "-mini", m[1], m[3], shine=False)}</g>')
+        out.append(f'<g transform="translate({cx + 30 * k},{cy}) scale({scale})">{medal(m[0] + str(k), m[1], m[2], m[3], m[4], shine=False)}</g>')
     return "".join(reversed(out))
 
 
@@ -400,7 +343,7 @@ def project_card(t: dict, slug, name, award, tagline, tags, motif, role=None, wi
     W, H = (1280, 340) if wide else (640, 340)
     mx, my, mw, mh = (676, 24, 580, 292) if wide else (412, 24, 204, 292)
     n_medals = len(MEDALS_BY_PROJECT.get(slug, []))
-    pill, _ = chip(54 + 34 * n_medals if n_medals else 32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
+    pill, _ = chip(58 + 30 * n_medals if n_medals else 32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
     lines = wrap(tagline, 62 if wide else 36)
     text = "".join(
         f'<text x="32" y="{170 + i * 26}" class="sans" font-size="18" fill="{t["muted"]}">{esc(line)}</text>'
