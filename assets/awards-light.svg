@@ -3,50 +3,50 @@
     @keyframes up { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } .motion { display: none; } }</style>
   <g class="tile" style="animation-delay:0.00s">
-    <rect x="20" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
+    <rect x="20" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
     <rect x="44" y="44" width="64" height="64" rx="18" fill="#b8860b" fill-opacity=".14" stroke="#b8860b" stroke-opacity=".5"/>
     <text x="76" y="86" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#b8860b">1°</text>
-    <text x="396" y="62" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">OCT 2026</text>
-    <text x="44" y="138" class="sans" font-weight="700" font-size="21" fill="#2d0057">SEDECO Chilangatón</text>
-    <text x="44" y="158" class="sans" font-size="15" fill="#6b5b95">Mapa H3 del comercio popular</text>
+    <text x="396" y="62" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">OCT 2026</text>
+    <text x="44" y="138" class="sans" font-weight="700" font-size="21" fill="#022c22">SEDECO Chilangatón</text>
+    <text x="44" y="158" class="sans" font-size="15" fill="#4b7a68">Mapa H3 del comercio popular</text>
   </g>
   <g class="tile" style="animation-delay:0.12s">
-    <rect x="440" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
+    <rect x="440" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
     <rect x="464" y="44" width="64" height="64" rx="18" fill="#b8860b" fill-opacity=".14" stroke="#b8860b" stroke-opacity=".5"/>
     <text x="496" y="86" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#b8860b">1°</text>
-    <text x="816" y="62" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">OCT 2026</text>
-    <text x="464" y="138" class="sans" font-weight="700" font-size="21" fill="#2d0057">Hackathon ADA</text>
-    <text x="464" y="158" class="sans" font-size="15" fill="#6b5b95">Datos abiertos a escala CDMX</text>
+    <text x="816" y="62" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">OCT 2026</text>
+    <text x="464" y="138" class="sans" font-weight="700" font-size="21" fill="#022c22">Hackathon ADA</text>
+    <text x="464" y="158" class="sans" font-size="15" fill="#4b7a68">Datos abiertos a escala CDMX</text>
   </g>
   <g class="tile" style="animation-delay:0.24s">
-    <rect x="860" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
+    <rect x="860" y="20" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
     <rect x="884" y="44" width="64" height="64" rx="18" fill="#b8860b" fill-opacity=".14" stroke="#b8860b" stroke-opacity=".5"/>
     <text x="916" y="86" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#b8860b">1°</text>
-    <text x="1236" y="62" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">JUN 2026</text>
-    <text x="884" y="138" class="sans" font-weight="700" font-size="21" fill="#2d0057">SEDECO SecretarIA</text>
-    <text x="884" y="158" class="sans" font-size="15" fill="#6b5b95">MercurIA · planeación de eventos</text>
+    <text x="1236" y="62" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">JUN 2026</text>
+    <text x="884" y="138" class="sans" font-weight="700" font-size="21" fill="#022c22">SEDECO SecretarIA</text>
+    <text x="884" y="158" class="sans" font-size="15" fill="#4b7a68">MercurIA · planeación de eventos</text>
   </g>
   <g class="tile" style="animation-delay:0.36s">
-    <rect x="20" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
+    <rect x="20" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
     <rect x="44" y="214" width="64" height="64" rx="18" fill="#b8860b" fill-opacity=".14" stroke="#b8860b" stroke-opacity=".5"/>
     <text x="76" y="256" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#b8860b">1°</text>
-    <text x="396" y="232" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">ABR 2026</text>
-    <text x="44" y="308" class="sans" font-weight="700" font-size="21" fill="#2d0057">IBM Talent Land</text>
-    <text x="44" y="328" class="sans" font-size="15" fill="#6b5b95">LumivIA · Genius Arena</text>
+    <text x="396" y="232" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">ABR 2026</text>
+    <text x="44" y="308" class="sans" font-weight="700" font-size="21" fill="#022c22">IBM Talent Land</text>
+    <text x="44" y="328" class="sans" font-size="15" fill="#4b7a68">LumivIA · Genius Arena</text>
   </g>
   <g class="tile" style="animation-delay:0.48s">
-    <rect x="440" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
-    <rect x="464" y="214" width="64" height="64" rx="18" fill="#7c3aed" fill-opacity=".14" stroke="#7c3aed" stroke-opacity=".5"/>
-    <text x="496" y="256" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#7c3aed">3°</text>
-    <text x="816" y="232" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">DIC 2025</text>
-    <text x="464" y="308" class="sans" font-weight="700" font-size="21" fill="#2d0057">ElevenLabs Hackathon</text>
-    <text x="464" y="328" class="sans" font-size="15" fill="#6b5b95">Psyness · Mejor proyecto con Bolt</text>
+    <rect x="440" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
+    <rect x="464" y="214" width="64" height="64" rx="18" fill="#059669" fill-opacity=".14" stroke="#059669" stroke-opacity=".5"/>
+    <text x="496" y="256" text-anchor="middle" class="sans" font-weight="800" font-size="28" fill="#059669">3°</text>
+    <text x="816" y="232" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">DIC 2025</text>
+    <text x="464" y="308" class="sans" font-weight="700" font-size="21" fill="#022c22">ElevenLabs Hackathon</text>
+    <text x="464" y="328" class="sans" font-size="15" fill="#4b7a68">Psyness · Mejor proyecto con Bolt</text>
   </g>
   <g class="tile" style="animation-delay:0.60s">
-    <rect x="860" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#e4dafc" stroke-width="1.5"/>
-    <rect x="884" y="214" width="64" height="64" rx="18" fill="#059669" fill-opacity=".14" stroke="#059669" stroke-opacity=".5"/>
-    <text x="916" y="256" text-anchor="middle" class="sans" font-weight="800" font-size="22" fill="#059669">OS</text>
-    <text x="1236" y="232" text-anchor="end" class="mono" font-size="13" fill="#6b5b95" letter-spacing="1">NOV 2025</text>
-    <text x="884" y="308" class="sans" font-weight="700" font-size="21" fill="#2d0057">Made in Austria</text>
-    <text x="884" y="328" class="sans" font-size="15" fill="#6b5b95">RailSense · Ganador Open Source</text>
+    <rect x="860" y="190" width="400" height="150" rx="22" fill="#ffffff" stroke="#cdeedd" stroke-width="1.5"/>
+    <rect x="884" y="214" width="64" height="64" rx="18" fill="#7c3aed" fill-opacity=".14" stroke="#7c3aed" stroke-opacity=".5"/>
+    <text x="916" y="256" text-anchor="middle" class="sans" font-weight="800" font-size="22" fill="#7c3aed">OS</text>
+    <text x="1236" y="232" text-anchor="end" class="mono" font-size="13" fill="#4b7a68" letter-spacing="1">NOV 2025</text>
+    <text x="884" y="308" class="sans" font-weight="700" font-size="21" fill="#022c22">Made in Austria</text>
+    <text x="884" y="328" class="sans" font-size="15" fill="#4b7a68">RailSense · Ganador Open Source</text>
   </g></svg>

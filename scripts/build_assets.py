@@ -156,7 +156,7 @@ AWARDS = [
     ("1°", "gold", "SEDECO SecretarIA", "MercurIA · planeación de eventos", "JUN 2026"),
     ("1°", "gold", "IBM Talent Land", "LumivIA · Genius Arena", "ABR 2026"),
     ("3°", "accent", "ElevenLabs Hackathon", "Psyness · Mejor proyecto con Bolt", "DIC 2025"),
-    ("OS", "green", "Made in Austria", "RailSense · Ganador Open Source", "NOV 2025"),
+    ("OS", "alt", "Made in Austria", "RailSense · Ganador Open Source", "NOV 2025"),
 ]
 
 

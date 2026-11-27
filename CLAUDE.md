@@ -18,7 +18,7 @@ GITHUB_TOKEN=$(gh auth token) python3 scripts/build_profile.py   # data SVGs: Pa
 
 ## Architecture
 
-- **`scripts/theme.py`** holds the single palette (`THEMES["dark"|"light"]`) and the shared helpers (`chip`, `svg_doc`, reduced-motion CSS). Change colors only here. The palette is `#2d0057` / `#7c3aed` / `#a78bfa`, with `#FFD700` and `#34d399` as award accents.
+- **`scripts/theme.py`** holds the single palette (`THEMES["dark"|"light"]`) and the shared helpers (`chip`, `svg_doc`, reduced-motion CSS). Change colors only here. The palette is emerald green (`#022c22` / `#059669` / `#34d399`), with `#FFD700` for first places and violet (`alt`) as the contrast accent.
 - **Two variants of everything:** every asset is written as `<name>-dark.svg` and `<name>-light.svg`. The README wraps each one in `<picture>` with a `prefers-color-scheme: dark` `<source>` and the light file as the `<img>` fallback. When you add an asset, follow the same pattern.
 - **`build_assets.py`** turns content into SVGs. The content lives in its data lists: `AWARDS` (from the CV) and `PROJECTS` (each project has a motif function that draws the animated illustration on the right of its card). To update awards or projects, edit those lists and re-run the script.
 - **`build_profile.py`** queries the contribution calendar and repo languages, then writes to `assets/generated/`. The Pac-Man animation works like this:

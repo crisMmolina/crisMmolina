@@ -180,7 +180,7 @@ def pacman(t: dict, weeks: list[list[dict]], total: int) -> str:
   <clipPath id="arena"><rect x="{gx - 40}" y="{gy - 10}" width="{W - gx + 10}" height="{7 * pitch + 20}"/></clipPath>
   <g clip-path="url(#arena)">
     {ghost(t['accent2'], 1.1)}
-    {ghost(t['green'], 1.9)}
+    {ghost(t['alt'], 1.9)}
     <g class="motion glow">
       <animateMotion dur="{dur:.2f}s" repeatCount="indefinite" rotate="auto" path="{path_d}"/>
       <path d="{mouth_open}" fill="{t['gold'] if t is THEMES['dark'] else t['accent']}">
