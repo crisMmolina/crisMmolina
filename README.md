@@ -15,7 +15,7 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
 ## Reconocimientos
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/chilangaton-dark.svg"><img width="31%" alt="Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026: estructura de datos de un mapa H3 del comercio popular de la CDMX." src="assets/awards/chilangaton-light.svg"></picture>
+  <a href="https://colonia-hackada.onrender.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/chilangaton-dark.svg"><img width="31%" alt="Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026, con ColonIA: mapa H3 del comercio popular de la CDMX." src="assets/awards/chilangaton-light.svg"></picture></a>
   <a href="https://colonia-hackada.onrender.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/ada-dark.svg"><img width="31%" alt="Medalla de 1er lugar en Hackathon ADA, octubre 2026, con ColonIA." src="assets/awards/ada-light.svg"></picture></a>
   <a href="https://mercur-ia.vercel.app/map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/secretaria-dark.svg"><img width="31%" alt="Medalla de 1er lugar en SEDECO SecretarIA Hackathon, junio 2026, con MercurIA." src="assets/awards/secretaria-light.svg"></picture></a>
   <a href="https://lumiv-ia-f.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/ibm-dark.svg"><img width="31%" alt="Medalla de 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA." src="assets/awards/ibm-light.svg"></picture></a>
@@ -27,7 +27,7 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
 
 <a href="https://colonia-hackada.onrender.com"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-colonia-dark.svg">
-  <img width="100%" alt="ColonIA, 1er lugar en Hackathon ADA (oct 2026): mapa vivo del comercio de barrio de la CDMX; los negocios se dan de alta con una nota de voz y quien compra recibe rutas sin cadenas. Integré datos abiertos de DENUE, tianguis, mercados y CONAPO. React, FastAPI, Mapbox, Telegram." src="assets/project-colonia-light.svg">
+  <img width="100%" alt="ColonIA, 1er lugar en Hackathon ADA y SEDECO Chilangatón (oct 2026): mapa vivo del comercio de barrio de la CDMX; los negocios se dan de alta con una nota de voz y quien compra recibe rutas sin cadenas. Integré datos abiertos de DENUE, tianguis, mercados y CONAPO. React, FastAPI, Mapbox, Telegram." src="assets/project-colonia-light.svg">
 </picture></a>
 
 <p>
@@ -54,11 +54,9 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
 ## Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare&theme=dark&perline=16">
-  <img width="100%" alt="JavaScript, TypeScript, React, Vite, Node.js, Python, Java, C, HTML, CSS, Bootstrap, MySQL, Git, GitHub, Vercel, Cloudflare" src="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare&theme=light&perline=16">
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare,gcp&theme=dark&perline=17">
+  <img width="100%" alt="JavaScript, TypeScript, React, Vite, Node.js, Python, Java, C, HTML, CSS, Bootstrap, MySQL, Git, GitHub, Vercel, Cloudflare, Google Cloud" src="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare,gcp&theme=light&perline=17">
 </picture>
-
-<sub>También: Oracle Database, Neon, Render, Google Cloud, SCRUM · Inglés B1</sub>
 
 ## Actividad
 
@@ -67,11 +65,7 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
   <img width="100%" alt="Pac-Man recorre mi gráfica de contribuciones del último año, seguido por dos fantasmas." src="assets/generated/pacman-light.svg">
 </picture>
 
-<details>
-  <summary><b>Ver estadísticas</b></summary>
-  <br>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/generated/stats-dark.svg">
-    <img width="100%" alt="Mis contribuciones del último año como una ciudad 3D, donde cada edificio es un día, junto con mis estadísticas: estrellas, commits, pull requests, issues, lenguajes más usados, contribuciones totales y rachas." src="assets/generated/stats-light.svg">
-  </picture>
-</details>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/generated/stats-dark.svg">
+  <img width="100%" alt="Mis contribuciones del último año como una ciudad 3D, donde cada edificio es un día, junto con mis estadísticas: estrellas, commits, pull requests, issues, lenguajes más usados, contribuciones totales y rachas." src="assets/generated/stats-light.svg">
+</picture>

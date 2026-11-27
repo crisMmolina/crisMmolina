@@ -24,9 +24,10 @@ GITHUB_TOKEN=$(gh auth token) python3 scripts/build_profile.py   # data SVGs: Pa
   - `MEDALS`: one medal per award, written to `assets/awards/`. Each entry sets the finish, shape, icon and linked project slug.
   - `FEATURED`: ColonIA, drawn as the full-width card.
   - `PROJECTS`: the 2×2 grid. Each project has a motif function that draws the animated illustration on its card.
-  - A project whose slug appears in `MEDALS` automatically gets a mini medal on its card.
+  - A project whose slug appears in `MEDALS` automatically gets its mini medals on its card (ColonIA has two: ADA and Chilangatón).
   - To update awards or projects, edit those lists and re-run the script.
-- **`medals.py`** draws the GitHub-achievement-style coins around (0,0) with radius 100. Callers place and scale them with a transform. Finishes: `gold` is a gold rim on an emerald face (1st place), `violet` is 3rd place, `mint` is a hexagon for special mentions. The icons are original drawings, never event or brand logos.
+- **`medals.py`** draws the GitHub-achievement-style coins around (0,0) with radius 100. Callers place and scale them with a transform. `ribbon()` draws the hanging ribbon for the full award SVGs. Finishes: `gold` on an emerald face (1st place), `violet` (3rd place), `mint` (special mentions); all are circles. Icons are engraved line drawings in the rim's metal, original, never event or brand logos. Metal gradients use `userSpaceOnUse` because a bounding-box gradient doesn't paint on straight lines. Don't add entrance animations that start at `opacity:0`: the static frame must show the medal.
+- **README layout:** the Pac-Man graph and the stats city are both always visible (no `<details>`). The stack is only the skillicons row.
 - **`build_profile.py`** queries the contribution calendar and repo languages, plus every year's calendar for the all-time totals and streaks, then writes to `assets/generated/`. `stats-*.svg` is an isometric city (one building per day, height scaled to contributions) on top of the minimal stats layout. Its stamp is the last day with activity, so the Action only commits when the data changes. The Pac-Man animation works like this:
   - It follows a serpentine route through the grid (SMIL `animateMotion`, paced).
   - Each cell's CSS `animation-delay` is set to the moment Pac-Man reaches it, computed from distance along the route divided by `speed`. That's what makes the eating line up with Pac-Man's position.

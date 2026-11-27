@@ -7,7 +7,7 @@ import math
 import os
 import random
 
-from medals import SHINE_CSS, medal
+from medals import SHINE_CSS, medal, ribbon
 from theme import MONO, SANS, THEMES, chip, esc, svg_doc, text_width, write
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -153,8 +153,8 @@ def banner(t: dict) -> str:
 
 MEDALS = [
     # slug, finish, shape, icon, chip, rank line, event, date, project slug (for the mini medal / link), alt text
-    ("chilangaton", "gold", "circle", "hexmap", "1°", "1er lugar", "SEDECO Chilangatón", "oct 2026", None,
-     "Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026: estructura de datos de un mapa H3 del comercio popular de la CDMX."),
+    ("chilangaton", "gold", "circle", "hexmap", "1°", "1er lugar", "SEDECO Chilangatón", "oct 2026", "colonia",
+     "Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026, con ColonIA: mapa H3 del comercio popular de la CDMX."),
     ("ada", "gold", "circle", "pin", "1°", "1er lugar", "Hackathon ADA", "oct 2026", "colonia",
      "Medalla de 1er lugar en Hackathon ADA, octubre 2026, con ColonIA."),
     ("secretaria", "gold", "circle", "gov", "1°", "1er lugar", "SEDECO SecretarIA", "jun 2026", "mercuria",
@@ -163,36 +163,36 @@ MEDALS = [
      "Medalla de 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA."),
     ("elevenlabs", "violet", "circle", "voice", "3°", "3er lugar + Bolt", "ElevenLabs Hackathon", "dic 2025", "psyness",
      "Medalla de 3er lugar y Mejor proyecto con Bolt en ElevenLabs Hackathon México, diciembre 2025, con Psyness."),
-    ("austria", "mint", "hex", "train", "OS", "Ganador Open Source", "Made in Austria", "nov 2025", "railsense",
+    ("austria", "mint", "circle", "train", "OS", "Ganador Open Source", "Made in Austria", "nov 2025", "railsense",
      "Medalla de ganador de la categoría Open Source en Your Future Made in Austria, noviembre 2025, con RailSense."),
 ]
-MEDAL_BY_PROJECT = {m[8]: m for m in MEDALS if m[8]}
+MEDALS_BY_PROJECT = {}
+for _m in MEDALS:
+    if _m[8]:
+        MEDALS_BY_PROJECT.setdefault(_m[8], []).append(_m)
 
 
 def medal_svg(t: dict, i: int, m: tuple) -> str:
     slug, finish, shape, icon_name, chip_txt, rank, event, date, _, alt = m
-    W, H = 320, 352
-    style = BASE_STYLE + SHINE_CSS + """
-    .rise { animation: rise .7s cubic-bezier(.2,.9,.3,1.2) both; transform-box: fill-box; transform-origin: center; }
-    @keyframes rise { from { opacity: 0; transform: scale(.85) } to { opacity: 1; transform: none } }
-    """
+    W, H = 320, 392
+    dark = t is THEMES["dark"]
     body = f"""
-  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="{'.45' if t is THEMES['dark'] else '.18'}"/></filter>
-  <g class="rise" style="animation-delay:{0.1 * i:.1f}s">
-    <g transform="translate(160,124)" filter="url(#sh)">{medal(slug, finish, shape, icon_name, chip_txt, shine_delay=1.2 * i)}</g>
-  </g>
-  <text x="160" y="282" text-anchor="middle" class="sans" font-weight="800" font-size="24" fill="{t['text']}">{esc(rank)}</text>
-  <text x="160" y="310" text-anchor="middle" class="sans" font-size="20" fill="{t['muted']}">{esc(event)}</text>
-  <text x="160" y="337" text-anchor="middle" class="mono" font-size="16" letter-spacing="1" fill="{t['accent']}">{esc(date.upper())}</text>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="{'.5' if dark else '.2'}"/></filter>
+  <g transform="translate(160,112)">{ribbon(slug, finish)}</g>
+  <g transform="translate(160,192) scale(.84)" filter="url(#sh)">{medal(slug, finish, shape, icon_name, chip_txt, shine_delay=1.2 * i)}</g>
+  <g transform="translate(160,112)"><rect x="-37" y="-6" width="74" height="14" rx="7" fill="url(#m-{slug}-rim)" stroke="#000" stroke-opacity=".25"/></g>
+  <text x="160" y="326" text-anchor="middle" class="sans" font-weight="800" font-size="24" fill="{t['text']}">{esc(rank)}</text>
+  <text x="160" y="353" text-anchor="middle" class="sans" font-size="19" fill="{t['muted']}">{esc(event)}</text>
+  <text x="160" y="380" text-anchor="middle" class="mono" font-size="15" letter-spacing="1.5" fill="{t['accent']}">{esc(date.upper())}</text>
 """
-    return svg_doc(W, H, body, style, alt)
+    return svg_doc(W, H, body, BASE_STYLE + SHINE_CSS, alt)
 
 
-def mini_medal(slug, cx: float, cy: float, scale: float = 0.22) -> str:
-    m = MEDAL_BY_PROJECT.get(slug)
-    if not m:
-        return ""
-    return f'<g transform="translate({cx},{cy}) scale({scale})">{medal(m[0], m[1], m[2], m[3], m[4], shine=False)}</g>'
+def mini_medals(slug, cx: float, cy: float, scale: float = 0.22) -> str:
+    out = []
+    for k, m in enumerate(MEDALS_BY_PROJECT.get(slug, [])):
+        out.append(f'<g transform="translate({cx + 30 * k},{cy}) scale({scale})">{medal(m[0], m[1], m[2], m[3], "", shine=False)}</g>')
+    return "".join(reversed(out))
 
 
 # --------------------------------------------------------------------------- project cards
@@ -300,7 +300,7 @@ def motif_colonia(t, ox, oy, w, h):
     return "".join(out)
 
 
-FEATURED = ("colonia", "ColonIA", "1er lugar · Hackathon ADA · oct 2026",
+FEATURED = ("colonia", "ColonIA", "1er lugar · Hackathon ADA y SEDECO Chilangatón · oct 2026",
             "Mapa vivo del comercio de barrio en CDMX: alta de negocios por nota de voz y rutas de compra sin cadenas.",
             ["React", "FastAPI", "Mapbox", "Telegram", "Datos abiertos"], motif_colonia,
             "Mi parte: integré datos abiertos reales (DENUE, tianguis, mercados, CONAPO) para escalar a toda la CDMX.")
@@ -339,8 +339,8 @@ CARD_CSS = f"""
 def project_card(t: dict, slug, name, award, tagline, tags, motif, role=None, wide=False) -> str:
     W, H = (1280, 340) if wide else (640, 340)
     mx, my, mw, mh = (676, 24, 580, 292) if wide else (412, 24, 204, 292)
-    has_medal = slug in MEDAL_BY_PROJECT
-    pill, _ = chip(88 if has_medal else 32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
+    n_medals = len(MEDALS_BY_PROJECT.get(slug, []))
+    pill, _ = chip(58 + 30 * n_medals if n_medals else 32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
     lines = wrap(tagline, 62 if wide else 36)
     text = "".join(
         f'<text x="32" y="{170 + i * 26}" class="sans" font-size="18" fill="{t["muted"]}">{esc(line)}</text>'
@@ -362,7 +362,7 @@ def project_card(t: dict, slug, name, award, tagline, tags, motif, role=None, wi
   <clipPath id="m"><rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="18"/></clipPath>
   <rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="18" fill="{t['bg2']}"/>
   <g clip-path="url(#m)">{motif(t, mx, my, mw, mh)}</g>
-  {mini_medal(slug, 54, 44)}
+  {mini_medals(slug, 54, 44)}
   {pill}
   <text x="30" y="128" class="sans" font-weight="800" font-size="44" letter-spacing="-1" fill="{t['text']}">{esc(name)}</text>
   {text}
