@@ -1,4 +1,4 @@
-"""Generate the static profile SVGs (banner, awards, project cards, icons).
+"""Generate the static profile SVGs (banner, award medals, project cards, icons).
 
 Run from the repo root:  python3 scripts/build_assets.py
 Every asset is written twice, as <name>-dark.svg and <name>-light.svg.
@@ -7,6 +7,7 @@ import math
 import os
 import random
 
+from medals import SHINE_CSS, medal
 from theme import MONO, SANS, THEMES, chip, esc, svg_doc, text_width, write
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -148,40 +149,50 @@ def banner(t: dict) -> str:
     return svg_doc(W, H, body, style, "Cristopher Molina — Ingeniería en Informática, IPN UPIICSA")
 
 
-# --------------------------------------------------------------------------- awards
+# --------------------------------------------------------------------------- medals
 
-AWARDS = [
-    ("1°", "gold", "SEDECO Chilangatón", "Mapa H3 del comercio popular", "OCT 2026"),
-    ("1°", "gold", "Hackathon ADA", "Datos abiertos a escala CDMX", "OCT 2026"),
-    ("1°", "gold", "SEDECO SecretarIA", "MercurIA · planeación de eventos", "JUN 2026"),
-    ("1°", "gold", "IBM Talent Land", "LumivIA · Genius Arena", "ABR 2026"),
-    ("3°", "accent", "ElevenLabs Hackathon", "Psyness · Mejor proyecto con Bolt", "DIC 2025"),
-    ("OS", "alt", "Made in Austria", "RailSense · Ganador Open Source", "NOV 2025"),
+MEDALS = [
+    # slug, finish, shape, icon, chip, rank line, event, date, project slug (for the mini medal / link), alt text
+    ("chilangaton", "gold", "circle", "hexmap", "1°", "1er lugar", "SEDECO Chilangatón", "oct 2026", None,
+     "Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026: estructura de datos de un mapa H3 del comercio popular de la CDMX."),
+    ("ada", "gold", "circle", "pin", "1°", "1er lugar", "Hackathon ADA", "oct 2026", "colonia",
+     "Medalla de 1er lugar en Hackathon ADA, octubre 2026, con ColonIA."),
+    ("secretaria", "gold", "circle", "gov", "1°", "1er lugar", "SEDECO SecretarIA", "jun 2026", "mercuria",
+     "Medalla de 1er lugar en SEDECO SecretarIA Hackathon, junio 2026, con MercurIA."),
+    ("ibm", "gold", "circle", "city", "1°", "1er lugar", "IBM Talent Land", "abr 2026", "lumivia",
+     "Medalla de 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA."),
+    ("elevenlabs", "violet", "circle", "voice", "3°", "3er lugar + Bolt", "ElevenLabs Hackathon", "dic 2025", "psyness",
+     "Medalla de 3er lugar y Mejor proyecto con Bolt en ElevenLabs Hackathon México, diciembre 2025, con Psyness."),
+    ("austria", "mint", "hex", "train", "OS", "Ganador Open Source", "Made in Austria", "nov 2025", "railsense",
+     "Medalla de ganador de la categoría Open Source en Your Future Made in Austria, noviembre 2025, con RailSense."),
 ]
+MEDAL_BY_PROJECT = {m[8]: m for m in MEDALS if m[8]}
 
 
-def awards(t: dict) -> str:
-    W, H = 1280, 360
-    tw, th, gap, pad = 400, 150, 20, 20
-    tiles = []
-    for i, (rank, tone, name, detail, date) in enumerate(AWARDS):
-        x = pad + (i % 3) * (tw + gap)
-        y = pad + (i // 3) * (th + gap)
-        color = t[tone]
-        tiles.append(f"""
-  <g class="tile" style="animation-delay:{0.12 * i:.2f}s">
-    <rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="22" fill="{t['surface']}" stroke="{t['border']}" stroke-width="1.5"/>
-    <rect x="{x + 24}" y="{y + 24}" width="64" height="64" rx="18" fill="{color}" fill-opacity=".14" stroke="{color}" stroke-opacity=".5"/>
-    <text x="{x + 56}" y="{y + 66}" text-anchor="middle" class="sans" font-weight="800" font-size="{28 if rank != 'OS' else 22}" fill="{color}">{rank}</text>
-    <text x="{x + tw - 24}" y="{y + 42}" text-anchor="end" class="mono" font-size="13" fill="{t['muted']}" letter-spacing="1">{date}</text>
-    <text x="{x + 24}" y="{y + 118}" class="sans" font-weight="700" font-size="21" fill="{t['text']}">{esc(name)}</text>
-    <text x="{x + 24}" y="{y + 138}" class="sans" font-size="15" fill="{t['muted']}">{esc(detail)}</text>
-  </g>""")
-    style = BASE_STYLE + """
-    .tile { animation: up .6s ease-out both; }
-    @keyframes up { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+def medal_svg(t: dict, i: int, m: tuple) -> str:
+    slug, finish, shape, icon_name, chip_txt, rank, event, date, _, alt = m
+    W, H = 320, 352
+    style = BASE_STYLE + SHINE_CSS + """
+    .rise { animation: rise .7s cubic-bezier(.2,.9,.3,1.2) both; transform-box: fill-box; transform-origin: center; }
+    @keyframes rise { from { opacity: 0; transform: scale(.85) } to { opacity: 1; transform: none } }
     """
-    return svg_doc(W, H, "".join(tiles), style, "Reconocimientos: 4 primeros lugares, un 3er lugar y ganador Open Source")
+    body = f"""
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000" flood-opacity="{'.45' if t is THEMES['dark'] else '.18'}"/></filter>
+  <g class="rise" style="animation-delay:{0.1 * i:.1f}s">
+    <g transform="translate(160,124)" filter="url(#sh)">{medal(slug, finish, shape, icon_name, chip_txt, shine_delay=1.2 * i)}</g>
+  </g>
+  <text x="160" y="282" text-anchor="middle" class="sans" font-weight="800" font-size="24" fill="{t['text']}">{esc(rank)}</text>
+  <text x="160" y="310" text-anchor="middle" class="sans" font-size="20" fill="{t['muted']}">{esc(event)}</text>
+  <text x="160" y="337" text-anchor="middle" class="mono" font-size="16" letter-spacing="1" fill="{t['accent']}">{esc(date.upper())}</text>
+"""
+    return svg_doc(W, H, body, style, alt)
+
+
+def mini_medal(slug, cx: float, cy: float, scale: float = 0.22) -> str:
+    m = MEDAL_BY_PROJECT.get(slug)
+    if not m:
+        return ""
+    return f'<g transform="translate({cx},{cy}) scale({scale})">{medal(m[0], m[1], m[2], m[3], m[4], shine=False)}</g>'
 
 
 # --------------------------------------------------------------------------- project cards
@@ -254,6 +265,46 @@ def motif_psyness(t, ox, oy, w, h):
     return "".join(out)
 
 
+def motif_colonia(t, ox, oy, w, h):
+    r, out = 22, []
+    rng = random.Random(11)
+    for col in range(int(w / (1.5 * r)) + 2):
+        for row in range(int(h / (SQ3 * r)) + 2):
+            cx = ox + col * 1.5 * r
+            cy = oy + row * SQ3 * r + (col % 2) * SQ3 * r / 2
+            hot = rng.random() < 0.38
+            fill = t["levels"][rng.randint(0, 3)] if hot else "none"
+            cls = f' class="heat2" style="animation-delay:{rng.uniform(0, 5):.1f}s"' if hot else ""
+            out.append(f'<polygon points="{hex_points(cx, cy, r - 2)}" fill="{fill}" stroke="{t["grid"]}" stroke-width="1.2"{cls}/>')
+    for _ in range(26):  # tianguis y mercados
+        out.append(f'<circle cx="{ox + rng.uniform(10, w - 10):.0f}" cy="{oy + rng.uniform(10, h - 10):.0f}" r="3.2" fill="{t["soft"]}"/>')
+    stops = [(ox + 250, oy + 230), (ox + 310, oy + 170), (ox + 380, oy + 190), (ox + 430, oy + 110), (ox + 510, oy + 70)]
+    route = "M" + " L".join(f"{x},{y}" for x, y in stops)
+    out.append(f'<path id="ruta" d="{route}" fill="none" stroke="{t["accent"]}" stroke-width="4" stroke-dasharray="10 8" stroke-linecap="round"/>')
+    for x, y in stops:
+        out.append(f'<circle cx="{x}" cy="{y}" r="8" fill="{t["surface"]}" stroke="{t["text"]}" stroke-width="3"/>')
+    out.append(f'<circle r="6" fill="{t["gold"]}" class="motion"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#ruta"/></animateMotion></circle>')
+    # nota de voz -> nuevo negocio en el mapa
+    bx, by = ox + 28, oy + 34
+    out.append(f'<rect x="{bx}" y="{by}" width="150" height="52" rx="14" fill="{t["surface"]}" stroke="{t["border"]}" stroke-width="1.5"/>')
+    out.append(f'<circle cx="{bx + 24}" cy="{by + 26}" r="11" fill="{t["accent2"]}"/><path d="M{bx + 21},{by + 20} L{bx + 29},{by + 26} L{bx + 21},{by + 32} Z" fill="{t["surface"]}"/>')
+    for i, bh in enumerate([10, 20, 30, 18, 26, 14, 22, 10, 16]):
+        out.append(f'<rect x="{bx + 44 + i * 11}" y="{by + 26 - bh / 2}" width="5" height="{bh}" rx="2.5" fill="{t["accent"]}" class="bar" style="animation-delay:{(i * 0.13) % 0.9:.2f}s"/>')
+    px, py = bx + 120, by + 150
+    out.append(f'<path d="M{bx + 75},{by + 58} Q{bx + 80},{by + 100} {px - 6},{py - 40}" fill="none" stroke="{t["muted"]}" stroke-width="2" stroke-dasharray="4 5"/>')
+    out.append(f'<g class="pop"><path d="M{px},{py} c-3,-7 -12,-13 -12,-24 a12,12 0 1 1 24,0 c0,11 -9,17 -12,24 z" fill="{t["accent2"]}" stroke="{t["text"]}" stroke-width="1.5"/>'
+               f'<circle cx="{px}" cy="{py - 24}" r="4.5" fill="{t["text"]}"/></g>')
+    label = "nota de voz → negocio en el mapa → ruta sin cadenas"
+    out.append(f'<rect x="{ox + 12}" y="{oy + h - 40}" width="{text_width(label, 13, mono=True) + 20:.0f}" height="28" rx="14" fill="{t["surface"]}" stroke="{t["border"]}"/>')
+    out.append(f'<text x="{ox + 22}" y="{oy + h - 21}" class="mono" font-size="13" fill="{t["muted"]}">{label}</text>')
+    return "".join(out)
+
+
+FEATURED = ("colonia", "ColonIA", "1er lugar · Hackathon ADA · oct 2026",
+            "Mapa vivo del comercio de barrio en CDMX: alta de negocios por nota de voz y rutas de compra sin cadenas.",
+            ["React", "FastAPI", "Mapbox", "Telegram", "Datos abiertos"], motif_colonia,
+            "Mi parte: integré datos abiertos reales (DENUE, tianguis, mercados, CONAPO) para escalar a toda la CDMX.")
+
 PROJECTS = [
     ("mercuria", "MercurIA", "1er lugar · SEDECO SecretarIA",
      "Planeación de eventos en CDMX con IA, análisis geoespacial y datos económicos.",
@@ -269,21 +320,7 @@ PROJECTS = [
      ["ElevenLabs", "Bolt", "Voz"], motif_psyness),
 ]
 
-
-def project_card(t: dict, name, award, tagline, tags, motif) -> str:
-    W, H = 640, 340
-    mx, my, mw, mh = 412, 24, 204, 292
-    pill, _ = chip(32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
-    lines = "".join(
-        f'<text x="32" y="{170 + i * 26}" class="sans" font-size="18" fill="{t["muted"]}">{esc(line)}</text>'
-        for i, line in enumerate(wrap(tagline, 36))
-    )
-    tag_svg, x = [], 32
-    for tag in tags:
-        svg, w = chip(x, 270, tag, t, size=13)
-        tag_svg.append(svg)
-        x += w + 8
-    style = BASE_STYLE + f"""
+CARD_CSS = f"""
     .pop {{ animation: pop 3s ease-in-out infinite both; transform-box: fill-box; transform-origin: 50% 100%; }}
     @keyframes pop {{ 0% {{ opacity: 0; transform: translateY(-12px) }} 15%,80% {{ opacity: 1; transform: none }} 100% {{ opacity: 0 }} }}
     .blink {{ animation: blink 2.4s ease-in-out infinite both; }}
@@ -292,20 +329,46 @@ def project_card(t: dict, name, award, tagline, tags, motif) -> str:
     @keyframes ripple {{ from {{ opacity: .9; transform: scale(1) }} to {{ opacity: 0; transform: scale(8) }} }}
     .heat {{ opacity: .25; animation: heat 3s ease-in-out infinite both; }}
     @keyframes heat {{ 0%,100% {{ opacity: .12 }} 50% {{ opacity: .45 }} }}
+    .heat2 {{ animation: heat2 6s ease-in-out infinite both; }}
+    @keyframes heat2 {{ 0%,100% {{ opacity: .3 }} 50% {{ opacity: .85 }} }}
     .bar {{ transform-box: fill-box; transform-origin: center; animation: talk 1.1s ease-in-out infinite alternate both; }}
     @keyframes talk {{ from {{ transform: scaleY(.25) }} to {{ transform: scaleY(1) }} }}
-    """
+"""
+
+
+def project_card(t: dict, slug, name, award, tagline, tags, motif, role=None, wide=False) -> str:
+    W, H = (1280, 340) if wide else (640, 340)
+    mx, my, mw, mh = (676, 24, 580, 292) if wide else (412, 24, 204, 292)
+    has_medal = slug in MEDAL_BY_PROJECT
+    pill, _ = chip(88 if has_medal else 32, 32, award, t, size=13, fill=t["bg2"], stroke=t["border"], color=t["accent"])
+    lines = wrap(tagline, 62 if wide else 36)
+    text = "".join(
+        f'<text x="32" y="{170 + i * 26}" class="sans" font-size="18" fill="{t["muted"]}">{esc(line)}</text>'
+        for i, line in enumerate(lines)
+    )
+    if role:
+        y = 170 + len(lines) * 26 + 6
+        text += "".join(
+            f'<text x="32" y="{y + i * 22}" class="sans" font-size="15" font-weight="600" fill="{t["accent"]}">{esc(line)}</text>'
+            for i, line in enumerate(wrap(role, 74))
+        )
+    tag_svg, x = [], 32
+    for tag in tags:
+        svg, w = chip(x, 270, tag, t, size=13)
+        tag_svg.append(svg)
+        x += w + 8
     body = f"""
   <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="26" fill="{t['surface']}" stroke="{t['border']}" stroke-width="2"/>
   <clipPath id="m"><rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="18"/></clipPath>
   <rect x="{mx}" y="{my}" width="{mw}" height="{mh}" rx="18" fill="{t['bg2']}"/>
   <g clip-path="url(#m)">{motif(t, mx, my, mw, mh)}</g>
+  {mini_medal(slug, 54, 44)}
   {pill}
   <text x="30" y="128" class="sans" font-weight="800" font-size="44" letter-spacing="-1" fill="{t['text']}">{esc(name)}</text>
-  {lines}
+  {text}
   {''.join(tag_svg)}
 """
-    return svg_doc(W, H, body, style, f"{name}: {tagline}")
+    return svg_doc(W, H, body, BASE_STYLE + CARD_CSS, f"{name}: {tagline}")
 
 
 # --------------------------------------------------------------------------- icons
@@ -331,9 +394,12 @@ def icon(t: dict, name: str) -> str:
 def main() -> None:
     for mode, t in THEMES.items():
         write(os.path.join(ASSETS, f"banner-{mode}.svg"), banner(t))
-        write(os.path.join(ASSETS, f"awards-{mode}.svg"), awards(t))
+        for i, m in enumerate(MEDALS):
+            write(os.path.join(ASSETS, "awards", f"{m[0]}-{mode}.svg"), medal_svg(t, i, m))
+        slug, name, award, tagline, tags, motif, role = FEATURED
+        write(os.path.join(ASSETS, f"project-{slug}-{mode}.svg"), project_card(t, slug, name, award, tagline, tags, motif, role, wide=True))
         for slug, name, award, tagline, tags, motif in PROJECTS:
-            write(os.path.join(ASSETS, f"project-{slug}-{mode}.svg"), project_card(t, name, award, tagline, tags, motif))
+            write(os.path.join(ASSETS, f"project-{slug}-{mode}.svg"), project_card(t, slug, name, award, tagline, tags, motif))
         for name in ICONS:
             write(os.path.join(ASSETS, "icons", f"{name}-{mode}.svg"), icon(t, name))
 

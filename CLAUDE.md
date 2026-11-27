@@ -20,8 +20,14 @@ GITHUB_TOKEN=$(gh auth token) python3 scripts/build_profile.py   # data SVGs: Pa
 
 - **`scripts/theme.py`** holds the single palette (`THEMES["dark"|"light"]`) and the shared helpers (`chip`, `svg_doc`, reduced-motion CSS). Change colors only here. The palette is emerald green (`#022c22` / `#059669` / `#34d399`), with `#FFD700` for first places and violet (`alt`) as the contrast accent.
 - **Two variants of everything:** every asset is written as `<name>-dark.svg` and `<name>-light.svg`. The README wraps each one in `<picture>` with a `prefers-color-scheme: dark` `<source>` and the light file as the `<img>` fallback. When you add an asset, follow the same pattern.
-- **`build_assets.py`** turns content into SVGs. The content lives in its data lists: `AWARDS` (from the CV) and `PROJECTS` (each project has a motif function that draws the animated illustration on the right of its card). To update awards or projects, edit those lists and re-run the script.
-- **`build_profile.py`** queries the contribution calendar and repo languages, then writes to `assets/generated/`. The Pac-Man animation works like this:
+- **`build_assets.py`** turns content into SVGs. The content lives in its data lists:
+  - `MEDALS`: one medal per award, written to `assets/awards/`. Each entry sets the finish, shape, icon and linked project slug.
+  - `FEATURED`: ColonIA, drawn as the full-width card.
+  - `PROJECTS`: the 2×2 grid. Each project has a motif function that draws the animated illustration on its card.
+  - A project whose slug appears in `MEDALS` automatically gets a mini medal on its card.
+  - To update awards or projects, edit those lists and re-run the script.
+- **`medals.py`** draws the GitHub-achievement-style coins around (0,0) with radius 100. Callers place and scale them with a transform. Finishes: `gold` is a gold rim on an emerald face (1st place), `violet` is 3rd place, `mint` is a hexagon for special mentions. The icons are original drawings, never event or brand logos.
+- **`build_profile.py`** queries the contribution calendar and repo languages, plus every year's calendar for the all-time totals and streaks, then writes to `assets/generated/`. `stats-*.svg` is an isometric city (one building per day, height scaled to contributions) on top of the minimal stats layout. Its stamp is the last day with activity, so the Action only commits when the data changes. The Pac-Man animation works like this:
   - It follows a serpentine route through the grid (SMIL `animateMotion`, paced).
   - Each cell's CSS `animation-delay` is set to the moment Pac-Man reaches it, computed from distance along the route divided by `speed`. That's what makes the eating line up with Pac-Man's position.
   - If you change the route, the cell size or the speed, compute the delays from the same distances.

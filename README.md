@@ -14,12 +14,21 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
 
 ## Reconocimientos
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/awards-dark.svg">
-  <img width="100%" alt="1er lugar en SEDECO Chilangatón (oct 2026), Hackathon ADA (oct 2026), SEDECO SecretarIA (jun 2026) e IBM Talent Land (abr 2026); 3er lugar y Mejor proyecto con Bolt en ElevenLabs (dic 2025); ganador Open Source en Your Future Made in Austria (nov 2025)." src="assets/awards-light.svg">
-</picture>
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/chilangaton-dark.svg"><img width="31%" alt="Medalla de 1er lugar en SEDECO Chilangatón, octubre 2026: estructura de datos de un mapa H3 del comercio popular de la CDMX." src="assets/awards/chilangaton-light.svg"></picture>
+  <a href="https://colonia-hackada.onrender.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/ada-dark.svg"><img width="31%" alt="Medalla de 1er lugar en Hackathon ADA, octubre 2026, con ColonIA." src="assets/awards/ada-light.svg"></picture></a>
+  <a href="https://mercur-ia.vercel.app/map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/secretaria-dark.svg"><img width="31%" alt="Medalla de 1er lugar en SEDECO SecretarIA Hackathon, junio 2026, con MercurIA." src="assets/awards/secretaria-light.svg"></picture></a>
+  <a href="https://lumiv-ia-f.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/ibm-dark.svg"><img width="31%" alt="Medalla de 1er lugar en IBM Talent Land Genius Arena, abril 2026, con LumivIA." src="assets/awards/ibm-light.svg"></picture></a>
+  <a href="#proyectos"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/elevenlabs-dark.svg"><img width="31%" alt="Medalla de 3er lugar y Mejor proyecto con Bolt en ElevenLabs Hackathon México, diciembre 2025, con Psyness." src="assets/awards/elevenlabs-light.svg"></picture></a>
+  <a href="#proyectos"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/awards/austria-dark.svg"><img width="31%" alt="Medalla de ganador de la categoría Open Source en Your Future Made in Austria, noviembre 2025, con RailSense." src="assets/awards/austria-light.svg"></picture></a>
+</p>
 
 ## Proyectos
+
+<a href="https://colonia-hackada.onrender.com"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/project-colonia-dark.svg">
+  <img width="100%" alt="ColonIA, 1er lugar en Hackathon ADA (oct 2026): mapa vivo del comercio de barrio de la CDMX; los negocios se dan de alta con una nota de voz y quien compra recibe rutas sin cadenas. Integré datos abiertos de DENUE, tianguis, mercados y CONAPO. React, FastAPI, Mapbox, Telegram." src="assets/project-colonia-light.svg">
+</picture></a>
 
 <p>
   <a href="https://mercur-ia.vercel.app/map"><picture>
@@ -40,7 +49,7 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
   </picture>
 </p>
 
-<sub>Código: <a href="https://github.com/zoe718/MercurIA">MercurIA</a> · <a href="https://github.com/crisMmolina/LumivIA-F">LumivIA</a></sub>
+<sub>Código: <a href="https://github.com/rvvictor/HackADA-Upiixia">ColonIA</a> · <a href="https://github.com/zoe718/MercurIA">MercurIA</a> · <a href="https://github.com/crisMmolina/LumivIA-F">LumivIA</a></sub>
 
 ## Stack
 
@@ -63,6 +72,6 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
   <br>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/stats-dark.svg">
-    <img width="100%" alt="Contribuciones del último año, rachas, repositorios públicos y lenguajes más usados." src="assets/generated/stats-light.svg">
+    <img width="100%" alt="Mis contribuciones del último año como una ciudad 3D, donde cada edificio es un día, junto con mis estadísticas: estrellas, commits, pull requests, issues, lenguajes más usados, contribuciones totales y rachas." src="assets/generated/stats-light.svg">
   </picture>
 </details>
