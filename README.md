@@ -54,8 +54,8 @@ Estudiante de **Ingeniería en Informática** en el IPN (UPIICSA). Construyo sof
 ## Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare,gcp&theme=dark&perline=17">
-  <img width="100%" alt="JavaScript, TypeScript, React, Vite, Node.js, Python, Java, C, HTML, CSS, Bootstrap, MySQL, Git, GitHub, Vercel, Cloudflare, Google Cloud" src="https://skillicons.dev/icons?i=js,ts,react,vite,nodejs,py,java,c,html,css,bootstrap,mysql,git,github,vercel,cloudflare,gcp&theme=light&perline=17">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <img width="100%" alt="JavaScript, TypeScript, React, Vite, Node.js, Python, Java, C, HTML, CSS, Bootstrap, MySQL, Git, GitHub, Vercel, Cloudflare, Google Cloud" src="assets/stack-light.svg">
 </picture>
 
 ## Actividad
